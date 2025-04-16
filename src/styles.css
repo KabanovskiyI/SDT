@@ -310,3 +310,41 @@ hr {
   font-weight: bold;
   cursor: pointer;
 }
+
+.layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрирует по вертикали */
+  align-items: center;
+  padding: 10px;
+  margin-top: 60px; /* Чтобы не перекрывалось navbar'ом */
+  overflow: hidden;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-height: calc(100vh - 80px); /* Учитываем navbar */
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 600px) {
+  .compass {
+    width: 240px;
+    height: 240px;
+  }
+
+  .task {
+    font-size: 14px;
+  }
+
+  .start-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
