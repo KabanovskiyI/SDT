@@ -2,7 +2,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
   background-color: #040302;
 }
 
@@ -310,20 +309,4 @@ hr {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .compass {
-    width: 240px;
-    height: 240px;
-  }
-
-  .task {
-    font-size: 14px;
-  }
-
-  .start-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
 }
