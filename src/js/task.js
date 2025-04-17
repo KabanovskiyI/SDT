@@ -8,7 +8,7 @@ document.querySelectorAll('.tasks input[type="checkbox"]').forEach((checkbox, in
     if (startText) {
       startText.remove();
     }
-    
+
     if (checkbox.checked) {
       task.classList.remove('hidden');
       task.classList.add('opened');
@@ -24,7 +24,7 @@ document.querySelectorAll('.tasks input[type="checkbox"]').forEach((checkbox, in
     ];
     const paths = [
       'Перейдіть до правого крила за напрямком SW',
-      'Тепер знайдіть аудиторію 221 нарямком S',
+      'Тепер знайдіть аудиторію 221 за нарямком S',
     ];
 
     output.textContent = messages[index];
