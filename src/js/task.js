@@ -3,7 +3,12 @@ document.querySelectorAll('.tasks input[type="checkbox"]').forEach((checkbox, in
     const task = checkbox.closest('.task');
     const output = document.getElementById('task-output');
     const path = document.getElementById('task-path');
-    // Добавляем/удаляем классы
+    const startText = document.getElementById('start-text');
+
+    if (startText) {
+      startText.remove();
+    }
+    
     if (checkbox.checked) {
       task.classList.remove('hidden');
       task.classList.add('opened');
@@ -12,7 +17,6 @@ document.querySelectorAll('.tasks input[type="checkbox"]').forEach((checkbox, in
       task.classList.add('hidden');
     }
 
-    // Определяем текст для каждой задачи
     const messages = [
       'Ви піднялись на другий поверх!',
       'Ви потрапили до правого крила коледжу!',
@@ -23,7 +27,6 @@ document.querySelectorAll('.tasks input[type="checkbox"]').forEach((checkbox, in
       'Тепер знайдіть аудиторію 221 нарямком S',
     ];
 
-    // Показываем сообщение
     output.textContent = messages[index];
     path.textContent = paths[index];
   });
