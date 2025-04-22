@@ -1,11 +1,11 @@
 document.getElementById("first-floor").addEventListener("click", function (e) {
     e.preventDefault();
-    showModal("src/image/first-floor.jpg");
+    showModal("image/first-floor.jpg");
   });
 
   document.getElementById("second-floor").addEventListener("click", function (e) {
     e.preventDefault();
-    showModal("src/image/second-floor.jpg");
+    showModal("image/second-floor.jpg");
   });
 
   function showModal(imageSrc) {
