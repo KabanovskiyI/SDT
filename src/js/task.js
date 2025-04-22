@@ -23,8 +23,8 @@ document.querySelectorAll('.tasks input[type="checkbox"]').forEach((checkbox, in
       'Вітаємо в аудиторії 221!'
     ];
     const paths = [
-      'Перейдіть до правого крила за напрямком SW',
-      'Тепер знайдіть аудиторію 221 за напрямком S',
+      'Перейдіть до правого крила за напрямком W',
+      'Тепер знайдіть аудиторію 221 за напрямком SW',
     ];
 
     output.textContent = messages[index];
