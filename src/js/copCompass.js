@@ -80,7 +80,7 @@ const compassCircle = document.querySelector(".compass-circle");
     }
     function getCompassHeading(e) {
       if (e.absolute === true && e.alpha != null) {
-        let alpha = (e.alpha + 270) % 360;
+        let alpha = (e.alpha + 360) % 360;
         if (typeof window.orientation !== "undefined") {
           alpha = alpha - window.orientation;
         }
