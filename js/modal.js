@@ -16,8 +16,8 @@ function showModalText(message) {
     closeButton.className = 'close';
     closeButton.innerHTML = '&times;';
     closeButton.style.position = 'absolute';
-    closeButton.style.top = '15px';        
-    closeButton.style.right = '20px';       
+    closeButton.style.top = '5px';        
+    closeButton.style.right = '5px';       
     closeButton.style.fontSize = '30px';
     closeButton.style.cursor = 'pointer';
     closeButton.style.color = '#0ff';
