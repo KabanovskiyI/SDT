@@ -3,9 +3,7 @@
 Проект: *Застосунок-навігатор для “Днів відкритих дверей”*
 
 Команда: *CodeWay*
- <video width="600" controls>
-  <source src="demovideo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+Проморолик застосунку: demovideo.mp4
  ---
 [:arrow_up: Повернутись до початкової сторінки](/README.md)
