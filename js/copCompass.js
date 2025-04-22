@@ -29,7 +29,9 @@ const compassCircle = document.querySelector(".compass-circle");
     }
 
     function handler(e) {
-      compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+      const compass = getCompassHeading(e);
+      if (compass == null) return;
+    
       compassCircle.style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
 
       // ±15 degree
@@ -76,5 +78,20 @@ const compassCircle = document.querySelector(".compass-circle");
         );
       return Math.round(psi);
     }
-
+    function getCompassHeading(e) {
+      if (e.absolute === true && e.alpha != null) {
+        let alpha = (e.alpha + 270) % 360;
+        if (typeof window.orientation !== "undefined") {
+          alpha = alpha - window.orientation;
+        }
+        if (alpha < 0) alpha += 360;
+        return alpha;
+      }
+    
+      if (e.webkitCompassHeading != null) {
+        return e.webkitCompassHeading;
+      }
+    
+      return null;
+    }
     init();
