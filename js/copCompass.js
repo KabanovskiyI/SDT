@@ -1,5 +1,4 @@
 const compassCircle = document.querySelector(".compass-circle");
-    const myPoint = document.querySelector(".my-point");
     const startBtn = document.querySelector(".start-btn");
     const isIOS =
       navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
@@ -33,18 +32,6 @@ const compassCircle = document.querySelector(".compass-circle");
       if (compass == null) return;
     
       compassCircle.style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
-
-      // ±15 degree
-      if (
-        (pointDegree < Math.abs(compass) &&
-          pointDegree + 15 > Math.abs(compass)) ||
-        pointDegree > Math.abs(compass + 15) ||
-        pointDegree < Math.abs(compass)
-      ) {
-        myPoint.style.opacity = 0;
-      } else if (pointDegree) {
-        myPoint.style.opacity = 1;
-      }
     }
 
     let pointDegree;
